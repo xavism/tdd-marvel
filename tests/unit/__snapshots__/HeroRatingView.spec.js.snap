@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeroRatingView renders the component 1`] = `
+<div>
+  <hero-stub></hero-stub>
+  <rating-stub></rating-stub>
+</div>
+`;
