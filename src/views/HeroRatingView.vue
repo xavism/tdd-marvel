@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Hero/>
+        <Hero :hero="hero"/>
         <Rating/>
     </div>
 </template>
@@ -14,6 +14,13 @@ export default {
     components: {
         Hero,
         Rating
+    },
+    data() {
+        return {
+            hero: {
+                name: ''
+            }
+        }
     }
 }
 </script>

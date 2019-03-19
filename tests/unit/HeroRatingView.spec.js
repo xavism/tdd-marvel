@@ -5,7 +5,11 @@ import Hero from '@/components/Hero'
 
 describe('HeroRatingView', () => {
     const build = () => {
-        const wrapper = shallowMount(HeroRatingView);
+        const wrapper = shallowMount(HeroRatingView, {
+            data: () => ({
+                hero: {}
+            })
+        });
     
         return {
           wrapper,
@@ -15,18 +19,27 @@ describe('HeroRatingView', () => {
       };
 
     it('renders the component', () => {
-        // arrange
         const { wrapper } = build();
-        // assert
+
         expect(wrapper.html()).toMatchSnapshot();
     });
     
     it('renders the childs', () => {
-        // arrange
         const { rating, hero } = build();
     
-        // assert
         expect(rating().exists()).toBe(true);
         expect(hero().exists()).toBe(true);
+    });
+
+    it('passes a Hero to the component to show the info', () => {
+        const { wrapper, hero } = build();  
+        wrapper.setData({
+          hero: {
+            name: 'Thor',
+          },
+        });
+    
+        // assert
+        expect(hero().vm.hero).toBe(wrapper.vm.hero);
     });
 })

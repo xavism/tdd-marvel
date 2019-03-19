@@ -4,6 +4,13 @@
 
 <script>
 export default {
-    name: 'Hero'
+    name: 'Hero',
+    props: {
+        hero: {
+            type: Object,
+            required: true,
+            default: () => ({})
+        }
+    }
 }
 </script>
