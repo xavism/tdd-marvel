@@ -3,7 +3,5 @@
 exports[`HeroRatingView renders the component 1`] = `
 <div>
   <inputhero-stub></inputhero-stub>
-  <hero-stub hero="[object Object]"></hero-stub>
-  <rating-stub></rating-stub>
 </div>
 `;

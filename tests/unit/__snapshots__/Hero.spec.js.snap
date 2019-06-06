@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hero renders the component 1`] = `
+<div><img src="http://i.annihil.us/u/prod/marvel/i/mg/d/d0/5269657a74350.jpg" alt="hero Image" class="image-avatar">
+  <h1 class="hero-name">Thor</h1>
+  <rating-stub rating="2"></rating-stub>
+</div>
+`;

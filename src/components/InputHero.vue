@@ -1,9 +1,17 @@
 <template>
-    <input type="text">
+    <form @submit.prevent="$emit('submitted', name)">
+        <input type="text" v-model="name">
+        <button></button>
+    </form>
 </template>
 
 <script>
 export default {
-    name: 'InputHero'
-}
+  name: 'InputHero',
+  data() {
+    return {
+      name: '',
+    };
+  },
+};
 </script>
